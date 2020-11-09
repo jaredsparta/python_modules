@@ -38,6 +38,8 @@ def round_task():
 
 ![](images/img.png)
 
+- Apply CRUD - Create, Read, Update, Delete
+
 ```python
 import requests
 from emoji import emojize
@@ -59,9 +61,9 @@ else:
 # If status code is between 200-400 the .status_code returns True
 # Otherwise, the boolean is False
 def check_response_code(response):
-    if response.status_code:
+    if response.status_code == requests.codes.ok:
         print("Up and running")
-    elif response.status_code:
+    elif response.status_code == requests.codes.not_found:
         print("Unavailable")
     else:
         print("Oops, something went wrong!")
