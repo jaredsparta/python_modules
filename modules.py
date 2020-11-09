@@ -12,4 +12,19 @@ def round_task():
     else:
         return print(math.floor(float(choice)))
 
-round_task()
+## os module 
+import os, datetime, sys
+
+working_dir = os.getcwd()
+print(working_dir)
+
+# # Does not work in windows
+# print(os.uname())
+
+print(os.cpu_count()) # Prints number of CPU cores
+
+print(datetime.datetime.today()) # Returns current system datetime
+
+print(sys.path) # Allows one to see system paths
+
+print()
