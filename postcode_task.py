@@ -17,6 +17,7 @@ def get_ll():
     arg = input("Please enter your postcode: ")
     postcode = "http://api.postcodes.io/postcodes/" + arg
     response = requests.get(postcode)
+    print(response.status_code)
     if not response.status_code == 200:
         return print("Sorry, not in database")
     val_1 = response.content
