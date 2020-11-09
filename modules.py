@@ -4,12 +4,12 @@ import math
 ### TASK ###
 # Use ceil and float from math to make a round function
 
-def round_task(number):
-    checker = number % 1
+def round_task():
+    choice = input("Input a number to check: ")
+    checker = float(choice) % 1
     if checker >= 0.5:
-        return math.ceil(number)
+        return print(math.ceil(float(choice)))
     else:
-        return math.floor(number)
+        return print(math.floor(float(choice)))
 
-print(round_task(56))
-print(math.pi)
+round_task()

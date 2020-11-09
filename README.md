@@ -11,10 +11,11 @@ from <mod name> import *
 **Task 1**
 ```python
 # This will round a number appropriately
-def round_task(number):
-    checker = number % 1
+def round_task():
+    choice = input("Input a number to check: ")
+    checker = float(choice) % 1
     if checker >= 0.5:
-        return math.ceil(number)
+        return print(math.ceil(float(choice)))
     else:
-        return math.floor(number)
+        return print(math.floor(float(choice)))
 ```
