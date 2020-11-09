@@ -69,3 +69,40 @@ def check_response_code(response):
         print("Oops, something went wrong!")
 ```
 
+**Json Basic**
+- Stands for Javascript Object Notation
+- Data is in key-value pairs
+- Use cases:
+    - Browser data
+    - Json encoding from a dictionary
+    - Json decoding into a dictionary
+    - Handling files
+    - Writing to files
+    - Reading from files
+
+```python
+# This creates a car dictionary and parses it into a .json file called
+# "car_data.json"
+import json
+
+car_data = {
+    "Name": "Tesla",
+    "Engine": "Electric",
+}
+
+with open("car_data.json", "w") as jsonfile:
+    # indent=4 makes it look clearer
+    # sort_keys=True will sort the keys alphabetically/numerically
+    json.dump(car_data, data, indent=4, sort_keys=True)
+```
+
+```python
+# When added to above, this will pull data from a .json file#
+# In this example, the .json file is called car_data.json
+# which is the file created above
+# json.load(<name>) will then make it a dictionary in python
+with open("car_data.json", "r") as jsonfile:
+    car = json.load(jsonfile)
+    print(type(car))
+    print(car["name"])
+```
