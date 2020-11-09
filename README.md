@@ -16,12 +16,7 @@ import datetime, os, sys
 ```
 **What is pip?**
 - A package manager and installer
-```python
-# Syntax to install packages -- use in terminal
-pip install <name>
-```
-
-
+- Use ```pip install <name>``` to install python modules
 
 
 **Task 1**
@@ -42,4 +37,33 @@ def round_task():
 **API's**
 
 ![](images/img.png)
+
+```python
+import requests
+from emoji import emojize
+
+# Receives the status code from the website
+response = requests.get("https://www.bbc.co.uk/")
+
+# 200 = live -- 404 = error, not found
+
+# first iteration
+if response.status_code == 200:
+    print("Up and running")
+elif response.status_code == 404:
+    print("Unavailable")
+else:
+    print("Oops, something went wrong!")
+
+#second iteration
+# If status code is between 200-400 the .status_code returns True
+# Otherwise, the boolean is False
+def check_response_code(response):
+    if response.status_code:
+        print("Up and running")
+    elif response.status_code:
+        print("Unavailable")
+    else:
+        print("Oops, something went wrong!")
+```
 
