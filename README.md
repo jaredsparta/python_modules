@@ -108,6 +108,8 @@ with open("car_data.json", "r") as jsonfile:
     print(car["name"])
 ```
 
+![](images/1.png)
+
 **Exception handling**
 - This involves some keywords like: ```try```, ```except```, ```raise```, ```else```
 
