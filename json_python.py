@@ -23,3 +23,4 @@ with open("car_data.json", "r") as jsonfile:
     car = json.load(jsonfile)
     print(type(car))
     print(car["name"])
+    

@@ -93,7 +93,8 @@ car_data = {
 with open("car_data.json", "w") as jsonfile:
     # indent=4 makes it look clearer
     # sort_keys=True will sort the keys alphabetically/numerically
-    json.dump(car_data, data, indent=4, sort_keys=True)
+    #'
+    json.dump(car_data, jsonfile, indent=4, sort_keys=True)
 ```
 
 ```python
@@ -105,4 +106,32 @@ with open("car_data.json", "r") as jsonfile:
     car = json.load(jsonfile)
     print(type(car))
     print(car["name"])
+```
+
+**Exception handling**
+- This involves some keywords like: ```try```, ```except```, ```raise```, ```else```
+
+```python
+# This will try the code first, if a FileNotFoundError is called then
+# the 'except:' code is called
+try:
+    file = open("orders.txt")
+except FileNotFoundError:    
+    print("File not found")
+```
+
+- Using them all:
+
+```python
+# This is the code block for try except
+try:
+    file = open("orders.txt")
+except FileNotFoundError:    
+    print("File not found")
+    # If we wanted them to see the actual exception then use raise
+    raise   
+
+# finally will execute regardless of the above conditions
+finally:
+    print("Thanks!")
 ```

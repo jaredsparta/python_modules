@@ -22,3 +22,4 @@ def check_response_code(response):
         print("Unavailable")
     else:
         print("Oops, something went wrong!")
+
